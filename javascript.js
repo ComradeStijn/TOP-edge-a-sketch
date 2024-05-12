@@ -33,10 +33,12 @@ cell.forEach((button) => {
 
 
 let resetButton = document.querySelector("#reset");
-resetButton.addEventListener("click", function() {
+resetButton.addEventListener("click", resetGrid);
+
+function resetGrid() {
     cell.forEach((button) => {
         if (button.classList.contains("cellBlack")) {
             button.classList.toggle("cellBlack");
         }
     })
-})
+}

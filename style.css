@@ -7,23 +7,21 @@ body {
     padding-bottom: 5vh;
 }
 
-main {
+.top-buttons {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    /* outline: 1px solid red; */
 }
 
 #reset {
     max-width: fit-content;
-    margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5vh;
 }
 
 button {
-    border: 5px solid green;
-    color: green;
     padding: 15px 32px;
-    background-color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
     border-radius: 10px;
@@ -33,19 +31,36 @@ button {
     transition-duration: 0.4s;
 }
 
-button:hover {
+.btn-red {
+    border: 5px solid darkred;
+    background-color: white;
+    color: darkred;
+}
+
+.btn-red:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.btn-green {
+    border: 5px solid green;
+    background-color: white;
+    color: green;
+}
+
+.btn-green:hover {
     background-color: green;
     color: white;
 }
 
 .container {
-    outline: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     height: 70vh;
     width: 70vh;
     justify-content: center;
     align-items: center;
+    border: 3px solid black;
 }
 
 .cell {

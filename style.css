@@ -1,0 +1,13 @@
+.container {
+    outline: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30vw;
+    height: 60vh;
+    margin: auto;
+}
+
+.cell {
+    outline: 1px solid blue;
+    box-sizing: border-box;
+}

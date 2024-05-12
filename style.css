@@ -1,10 +1,19 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
 .container {
     outline: 1px solid red;
     display: flex;
     flex-wrap: wrap;
-    width: 30vw;
-    height: 60vh;
-    margin: auto;
+    height: 80vh;
+    width: 80vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .cell {

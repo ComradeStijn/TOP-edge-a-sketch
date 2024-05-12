@@ -1,4 +1,4 @@
-let pixelAmount = 16;
+let pixelAmount = 32;
 let container = document.querySelector(".container");
 
 

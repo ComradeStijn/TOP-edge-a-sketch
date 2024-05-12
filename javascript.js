@@ -30,3 +30,13 @@ cell.forEach((button) => {
         mouseDown = false;
     });
 });
+
+
+let resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", function() {
+    cell.forEach((button) => {
+        if (button.classList.contains("cellBlack")) {
+            button.classList.toggle("cellBlack");
+        }
+    })
+})

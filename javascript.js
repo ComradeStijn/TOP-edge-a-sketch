@@ -3,7 +3,7 @@ let container = document.querySelector(".container");
 let mouseDown = false;
 
 
-
+// Create pixelAmount x pixelAmount grid
 for (let i = 0; i < pixelAmount ** 2; i++) {
     let cell = document.createElement("div");
     cell.classList.toggle("cell");
@@ -11,7 +11,7 @@ for (let i = 0; i < pixelAmount ** 2; i++) {
     container.appendChild(cell);
 }
 
-
+// When holding down mouse button, turn cell to black
 let cell = document.querySelectorAll(".cell");
 cell.forEach((button) => {
     button.addEventListener("mouseleave", () => {

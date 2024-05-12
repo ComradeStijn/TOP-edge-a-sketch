@@ -17,6 +17,15 @@ body {
 }
 
 .cell {
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
     box-sizing: border-box;
+}
+
+.cell:hover {
+    background-color: #b9b9b9;
+    cursor:pointer;
+}
+
+.cellBlack {
+    background-color: black;
 }

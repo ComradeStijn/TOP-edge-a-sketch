@@ -29,7 +29,6 @@ function getRandomInt(min, max) {
     return Math.floor((Math.random() * (max - min + 1))) + min;
 }
 
-
 function getRandomRGBColor() {
     let red = getRandomInt(0, 255);
     let green = getRandomInt(0, 255);
@@ -37,14 +36,21 @@ function getRandomRGBColor() {
     return `rgb(${red}, ${green}, ${blue})`;
 }
 
-// When holding down mouse button, turn cell to black
+// When holding down mouse button, turn cell to random color, and have 
+// each subsequent mouse hover increase opacity by 10%
 function drawOnGrid() {
     let cell = document.querySelectorAll(".cell");
     cell.forEach((button) => {
         button.addEventListener("mouseleave", () => {
             if (mouseDown) {
-                if (button.style.backgroundColor === 'white') {
+                let cellOpacity = parseFloat(window.getComputedStyle(button).getPropertyValue('opacity'));
+                let backgroundColor = window.getComputedStyle(button).backgroundColor;
+                if (backgroundColor === 'white' || backgroundColor === 'rgb(255, 255, 255)') {
                     button.style.backgroundColor = getRandomRGBColor();
+                    button.style.opacity = '0.1';
+                } else if (cellOpacity < 1) {
+                    cellOpacity += 0.1;
+                    button.style.opacity = `${cellOpacity}`;
                 }
             }
         });

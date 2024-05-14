@@ -73,10 +73,6 @@ button {
     cursor:pointer;
 }
 
-.cellBlack {
-    background-color: black;
-}
-
 .no-drag {
     user-select: none;
     -moz-user-select: none;

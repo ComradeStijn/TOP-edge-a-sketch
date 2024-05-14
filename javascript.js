@@ -9,7 +9,8 @@ function createGrid() {
     for (let i = 0; i < pixelAmount ** 2; i++) {
         let cell = document.createElement("div");
         cell.classList.toggle("cell");
-        cell.style.cssText = `height: ${100/pixelAmount}%; width: ${100/pixelAmount}%;`
+        cell.style.cssText = `height: ${100/pixelAmount}%; width: ${100/pixelAmount}%;
+                            background-color: white;`
         container.appendChild(cell);
     }
     drawOnGrid();
@@ -24,14 +25,26 @@ function deleteGrid() {
 }
 
 
+function getRandomInt(min, max) {
+    return Math.floor((Math.random() * (max - min + 1))) + min;
+}
+
+
+function getRandomRGBColor() {
+    let red = getRandomInt(0, 255);
+    let green = getRandomInt(0, 255);
+    let blue = getRandomInt(0, 255);
+    return `rgb(${red}, ${green}, ${blue})`;
+}
+
 // When holding down mouse button, turn cell to black
 function drawOnGrid() {
     let cell = document.querySelectorAll(".cell");
     cell.forEach((button) => {
         button.addEventListener("mouseleave", () => {
             if (mouseDown) {
-                if (!button.classList.contains("cellBlack")){
-                    button.classList.toggle("cellBlack");
+                if (button.style.backgroundColor === 'white') {
+                    button.style.backgroundColor = getRandomRGBColor();
                 }
             }
         });
@@ -53,9 +66,7 @@ resetButton.addEventListener("click", resetGrid);
 function resetGrid() {
     let cell = document.querySelectorAll(".cell");
     cell.forEach((button) => {
-        if (button.classList.contains("cellBlack")) {
-            button.classList.toggle("cellBlack");
-        }
+        button.style.backgroundColor = 'white';
     })
 }
 

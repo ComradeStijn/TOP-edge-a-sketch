@@ -20,9 +20,9 @@ body {
 }
 
 button {
-    padding: 15px 32px;
+    padding: 1rem 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
+    font-size: 2rem;
     border-radius: 10px;
     text-align: center;
     display: inline-block;
@@ -59,11 +59,12 @@ button {
     width: 70vh;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
+    border: 1rem solid rgb(34, 0, 146);
+    border-radius: 20px;
 }
 
 .cell {
-    outline: 1px solid blue;
+    outline: 1px solid rgba(0, 0, 255, 0.282);
     box-sizing: border-box;
 }
 
@@ -74,4 +75,13 @@ button {
 
 .cellBlack {
     background-color: black;
+}
+
+.no-drag {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: none;
 }
